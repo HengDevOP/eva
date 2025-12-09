@@ -1,0 +1,1 @@
+const data = async funtion(generateData)
