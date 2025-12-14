@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Navbar -->
+  <%- include('layout/head') %>
+  <body
+    class="bg-gray-900 text-white font-sans min-h-screen flex items-center justify-center"
+  >
+    <!-- Navbar -->
+    <%- include('layout/nav') %>
+    <div class="text-center p-6 bg-gray-800 rounded-lg shadow-lg">
+      <h1 class="text-3xl font-bold mb-4">🚫 Access Denied</h1>
+      <p class="text-gray-400 mb-6">
+        You do not have permission to view this page.
+      </p>
+      <a
+        href="/"
+        class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded font-semibold"
+      >
+        Go Back Home
+      </a>
+    </div>
+  </body>
+</html>

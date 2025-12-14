@@ -1,0 +1,82 @@
+[
+  {
+    "name": "!fishing or !fish",
+    "description": "Catch random fish",
+    "usage": "Everyone"
+  },
+  {
+    "name": "!fishing enable",
+    "description": "Enable fishing plugin on your server",
+    "usage": "Admin"
+  },
+  {
+    "name": "!fishing disable",
+    "description": "Disable fishing plugin on your server",
+    "usage": "Admin"
+  },
+  {
+    "name": "!fishing book",
+    "description": "Show current fishing data",
+    "usage": "Everyone"
+  },
+  {
+    "name": "!fishing rodprice { newPrice }",
+    "description": "Update fishing rod price, this is where user will purchase for using currency",
+    "usage": "Admin"
+  },
+  {
+    "name": "!fishing newaccount @user",
+    "description": "Create fishing account for the user",
+    "usage": "Admin"
+  },
+  {
+    "name": "!fishing create",
+    "description": "Create new fishing items, this is where user can catch it from the item list",
+    "usage": "Admin"
+  },
+  {
+    "name": "!fishing chance { newChance }",
+    "description": "Set custom fishing rod broken chance",
+    "usage": "Admin"
+  },
+  {
+    "name": "!fishing cooldown { newCooldown = second }",
+    "description": "Set custom cooldown when user catch, this will prevent from spamming",
+    "usage": "Admin"
+  },
+  {
+    "name": "!fishing resetcooldown @user",
+    "description": "Reset user fishing cooldown to default",
+    "usage": "Admin"
+  },
+  {
+    "name": "!fishing ban @user",
+    "description": "Ban someone from using fishing",
+    "usage": "Admin"
+  },
+  {
+    "name": "!fishing unban @user",
+    "description": "Unban someone to start using fishing again",
+    "usage": "Admin"
+  },
+  {
+    "name": "!fishing inv || !fishing inventory",
+    "description": "Show your fishing inventory",
+    "usage": "Everyone"
+  },
+  {
+    "name": "!fishing buyrod",
+    "description": "Buy fishing rod",
+    "usage": "Everyone"
+  },
+  {
+    "name": "!fishing sell { itemId } { amount }",
+    "description": "Sell item from your fishing inventory",
+    "usage": "Everyone"
+  },
+  {
+    "name": "!fishing delete { itemId }",
+    "description": "Delete that item from the fishing list, this will also remove that item from user fishing inventory as well",
+    "usage": "Admin"
+  }
+]

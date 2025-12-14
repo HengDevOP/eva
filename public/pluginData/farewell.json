@@ -1,0 +1,104 @@
+[
+  {
+    "name": "!farewell",
+    "description": "View farewell server dashboard",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!farewell enable",
+    "description": "Enable farewell on your server",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!farewell disable",
+    "description": "Disable farewell on your server",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!farewell channel #channel",
+    "description": "Beetle will send all farewell messages in #channel",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!farewell test",
+    "description": "Test farewell message",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!farewell message { content }",
+    "description": "Set custom content message when someone leaves your server, use placeholders {pinguser}, {username}, {usertag}, {userid}, {servername}, {usernickname}, {membercount}, {membercount_ordinal}, {createdat}, {joinedat} to replace for specific value content",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!farewell message reset",
+    "description": "Reset custom content message to default",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!farewell embed enable",
+    "description": "Enable embed farewell message on your server",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!farewell embed disable",
+    "description": "Disable embed farewell message on your server",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!farewell embed title { content }",
+    "description": "Set custom embed title message content, you can also use placeholders",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!farewell embed title reset",
+    "description": "Reset custom embed message title to default",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!farewell embed description { content }",
+    "description": "Set custom embed description message content, you can also use placeholders",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!farewell embed description reset",
+    "description": "Reset embed description content to default",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!farewell embed thumbnail [ {usericon}, {servericon} ]",
+    "description": "Set custom embed thumbnail, use {usericon}, {servericon} to display specific value or use `reset` to remove",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!farewell embed color #XXXXXX",
+    "description": "Set custom embed color, use `reset` to reset back to default #FFFFFF",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!farewell embed footer { content }",
+    "description": "Set custom embed footer, placeholder support soon...",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!farewell embed footer reset",
+    "description": "Reset embed footer to default (none display)",
+    "usage": "Admin",
+    "isPremium": false
+  }
+]

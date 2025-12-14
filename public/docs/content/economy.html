@@ -1,0 +1,90 @@
+<div class="prose max-w-none">
+  <h1 class="text-2xl font-bold text-gray-100 mb-4">Economy System</h1>
+  <p class="text-gray-300 mb-4">
+    The economy system allows members to earn, spend, and manage virtual
+    currency within your server. You can track balances, banks, and transfer
+    money between users.
+  </p>
+
+  <h2 class="text-xl font-semibold text-gray-200 mt-6 mb-2">Commands</h2>
+  <ul class="list-disc pl-6 space-y-2 text-gray-300">
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded">
+        !currency
+      </code>
+      – Show your current currency balance.
+    </li>
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded">
+        !currency bank
+      </code>
+      – Show your bank balance.
+    </li>
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded">
+        !currency deposit &lt;amount&gt;
+      </code>
+      – Deposit currency into your bank.
+    </li>
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded">
+        !currency withdraw &lt;amount&gt;
+      </code>
+      – Withdraw currency from your bank.
+    </li>
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded">
+        !currency send @user &lt;amount&gt;
+      </code>
+      – Send currency to another user.
+    </li>
+  </ul>
+
+  <h2 class="text-xl font-semibold text-gray-200 mt-6 mb-2">Admin Commands</h2>
+  <ul class="list-disc pl-6 space-y-2 text-gray-300">
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded">
+        !currency set @user &lt;amount&gt;
+      </code>
+      – Set a user’s currency amount.
+    </li>
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded">
+        !currency addcurrency @user &lt;amount&gt;
+      </code>
+      – Add currency to a user’s account.
+    </li>
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded">
+        !currency takecurrency @user &lt;amount&gt;
+      </code>
+      – Take currency from a user’s account.
+    </li>
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded">
+        !currency view @user
+      </code>
+      – View another user’s balance.
+    </li>
+  </ul>
+
+  <h2 class="text-xl font-semibold text-gray-200 mt-6 mb-2">Tips</h2>
+  <div
+    class="bg-gray-800 border border-gray-700 rounded p-4 mb-4 text-gray-300"
+  >
+    <p>
+      Encourage members to participate in server activities to earn more
+      currency. Use role permissions to restrict access to admin commands.
+    </p>
+  </div>
+
+  <h2 class="text-xl font-semibold text-gray-200 mt-6 mb-2">Notes</h2>
+  <ul class="list-disc pl-6 space-y-2 text-gray-300">
+    <li>All currency transactions are logged for moderation purposes.</li>
+    <li>
+      Bank deposits and withdrawals can have optional limits set by server
+      admins.
+    </li>
+    <li>Currency is purely virtual and for in-server use only.</li>
+  </ul>
+</div>

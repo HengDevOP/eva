@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('layout/head') %>
+  <body class="bg-gray-900 text-white min-h-screen">
+    <!-- Navbar -->
+    <%- include('layout/nav') %>
+
+    <!-- ✅ Add top padding to prevent navbar overlap -->
+    <main class="p-6 pt-28 max-w-7xl mx-auto">
+      <h2 class="text-2xl font-semibold mb-6">Your Servers</h2>
+
+      <% if (guilds.length === 0) { %>
+      <p class="text-gray-400 text-center">
+        You are not in any servers that this bot can manage.
+      </p>
+      <% } else { %>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+      >
+        <% guilds.forEach(guild => { %>
+
+        <div
+          class="bg-gray-800 p-4 rounded-lg text-center transition-opacity duration-300 <%= guild.botInGuild ? 'opacity-100' : 'opacity-50' %>"
+        >
+          <% if (guild.icon) { %>
+          <img
+            src="https://cdn.discordapp.com/icons/<%= guild.id %>/<%= guild.icon %>.png?size=128"
+            class="w-20 h-20 rounded-full mb-2 mx-auto"
+            alt="<%= guild.name %> Icon"
+          />
+          <% } else { %>
+          <div
+            class="w-20 h-20 rounded-full bg-gray-700 flex items-center justify-center text-gray-400 mb-2 text-xl mx-auto"
+          >
+            <%= guild.name.charAt(0) %>
+          </div>
+          <% } %>
+
+          <h3 class="font-semibold mb-1 truncate"><%= guild.name %></h3>
+
+          <% if (guild.botInGuild) { %>
+          <a
+            href="/dashboard/<%= guild.id %>"
+            class="mt-2 inline-block px-4 py-2 bg-yellow-500 rounded hover:bg-yellow-600 font-medium"
+          >
+            Configure
+          </a>
+          <% } else { %>
+          <a
+            href="<%= guild.addBotUrl %>"
+            class="mt-2 inline-block px-4 py-2 bg-blue-500 rounded hover:bg-blue-600 font-medium"
+          >
+            Add Bot
+          </a>
+          <% } %>
+        </div>
+        <!-- ✅ Close guild card -->
+
+        <% }) %>
+      </div>
+      <% } %>
+    </main>
+
+    <!-- Navbar -->
+    <%- include('layout/footer') %>
+
+    <script>
+      function updateCountdowns() {
+        const now = Date.now();
+
+        document.querySelectorAll(".countdown").forEach((el) => {
+          const expires = parseInt(el.getAttribute("data-expire"), 10);
+
+          if (isNaN(expires)) {
+            el.textContent = "Lifetime";
+            el.className = "text-green-400";
+            return;
+          }
+
+          const diff = expires - now;
+          if (diff <= 0) {
+            el.textContent = "Expired";
+            el.className = "text-red-400";
+            return;
+          }
+
+          const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+          const minutes = Math.floor((diff / (1000 * 60)) % 60);
+          const seconds = Math.floor((diff / 1000) % 60);
+
+          el.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        });
+      }
+
+      setInterval(updateCountdowns, 1000);
+      updateCountdowns();
+    </script>
+  </body>
+</html>

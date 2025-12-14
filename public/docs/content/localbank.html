@@ -1,0 +1,165 @@
+<div class="prose max-w-none text-gray-100">
+  <h1 class="text-2xl font-bold mb-4">Local Bank</h1>
+
+  <p class="text-gray-300 mb-4">
+    The Local Bank is a safe place for users to store their in-server currency.
+    Players can deposit, withdraw, and earn interest (optional) while keeping
+    funds protected from immediate loss. Bank commands integrate with the
+    Economy system, jobs, and shops.
+  </p>
+
+  <h2 class="text-xl font-semibold mt-6 mb-2">Core Concepts</h2>
+  <ul class="list-disc pl-6 space-y-2 text-gray-300">
+    <li>
+      <strong>Balance</strong> — amount the user currently carries on-hand.
+    </li>
+    <li>
+      <strong>Bank</strong> — amount stored in the local bank (safer, sometimes
+      earns interest).
+    </li>
+    <li>
+      <strong>Vault limits</strong> — optional caps admins can set to limit
+      deposits.
+    </li>
+    <li>
+      <strong>Cooldowns</strong> — prevent abuse by adding cooldowns to
+      deposit/withdraw actions.
+    </li>
+  </ul>
+
+  <h2 class="text-xl font-semibold mt-6 mb-2">User Commands</h2>
+  <ul class="list-disc pl-6 space-y-2 text-gray-300">
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded">!bank</code> –
+      Show both cash and bank balances.
+    </li>
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded"
+        >!bank deposit &lt;amount|all&gt;</code
+      >
+      – Deposit money from your cash into the bank.
+    </li>
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded"
+        >!bank withdraw &lt;amount|all&gt;</code
+      >
+      – Withdraw money from the bank to cash.
+    </li>
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded"
+        >!bank transfer @user &lt;amount&gt;</code
+      >
+      – Transfer money from your bank to another member's bank (if enabled).
+    </li>
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded"
+        >!bank history</code
+      >
+      – View recent bank transactions (if logging enabled).
+    </li>
+  </ul>
+
+  <h2 class="text-xl font-semibold mt-6 mb-2">Admin Commands</h2>
+  <ul class="list-disc pl-6 space-y-2 text-gray-300">
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded"
+        >!bank set @user &lt;amount&gt;</code
+      >
+      – Set a user’s bank balance.
+    </li>
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded"
+        >!bank add @user &lt;amount&gt;</code
+      >
+      – Add to a user’s bank balance.
+    </li>
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded"
+        >!bank take @user &lt;amount&gt;</code
+      >
+      – Remove from a user’s bank balance.
+    </li>
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded"
+        >!bank limit &lt;amount|null&gt;</code
+      >
+      – Set or remove bank deposit limit for the server.
+    </li>
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded"
+        >!bank interest &lt;rate%|off&gt;</code
+      >
+      – Enable/disable periodic interest payout (if feature supported).
+    </li>
+  </ul>
+
+  <h2 class="text-xl font-semibold mt-6 mb-2">Examples</h2>
+  <div class="bg-gray-800 border border-gray-700 rounded p-4 mb-4">
+    <p class="text-gray-300 mb-2"><strong>Deposit 500:</strong></p>
+    <code class="block bg-gray-700 text-gray-100 px-2 py-1 rounded"
+      >!bank deposit 500</code
+    >
+  </div>
+
+  <div class="bg-gray-800 border border-gray-700 rounded p-4 mb-4">
+    <p class="text-gray-300 mb-2"><strong>Withdraw all:</strong></p>
+    <code class="block bg-gray-700 text-gray-100 px-2 py-1 rounded"
+      >!bank withdraw all</code
+    >
+  </div>
+
+  <h2 class="text-xl font-semibold mt-6 mb-2">Behaviour & Rules</h2>
+  <ul class="list-disc pl-6 space-y-2 text-gray-300">
+    <li>
+      Deposits move currency from <em>cash</em> to <em>bank</em>, withdrawals
+      reverse it.
+    </li>
+    <li>
+      If transfers are enabled, they typically require both sender and receiver
+      to have an account.
+    </li>
+    <li>
+      Interest payouts (if enabled) should run on a scheduled job and respect
+      maximum caps.
+    </li>
+    <li>
+      All bank actions should be logged for auditing (optional but recommended).
+    </li>
+  </ul>
+
+  <h2 class="text-xl font-semibold mt-6 mb-2">Implementation notes for devs</h2>
+  <ul class="list-disc pl-6 space-y-2 text-gray-300">
+    <li>
+      Keep bank operations atomic (update DB balances in a transaction if
+      available).
+    </li>
+    <li>
+      Validate amounts to be positive integers and check for sufficient funds
+      before transfers/withdrawals.
+    </li>
+    <li>
+      Use cache (or Redis) for rate-limiting deposit/withdraw commands to
+      prevent spam.
+    </li>
+    <li>
+      Provide clear user feedback messages on success/failure, e.g., "Deposited
+      500 coins. New bank balance: 1,200".
+    </li>
+  </ul>
+
+  <h2 class="text-xl font-semibold mt-6 mb-2">Tips</h2>
+  <div
+    class="bg-gray-800 border border-gray-700 rounded p-4 mb-4 text-gray-300"
+  >
+    <ul class="list-disc pl-6 space-y-2">
+      <li>
+        Encourage users to keep emergency cash while storing the rest in the
+        bank to avoid theft in games.
+      </li>
+      <li>
+        Consider allowing admins to enable two-factor or role-based restrictions
+        for large withdrawals.
+      </li>
+    </ul>
+  </div>
+</div>

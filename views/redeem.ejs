@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redeem Code | <%= guild.name %></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-900 text-white min-h-screen flex flex-col">
+    <!-- Navbar -->
+    <%- include('layout/nav') %>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex items-center justify-center px-4 py-8">
+      <div
+        class="w-full max-w-lg bg-gray-800 rounded-xl shadow-xl p-8 space-y-6"
+      >
+        <!-- Guild Info -->
+        <div class="flex flex-col items-center space-y-3">
+          <% if (guild && guild.icon) { %>
+          <img
+            src="https://cdn.discordapp.com/icons/<%= guild.id %>/<%= guild.icon %>.png?size=128"
+            alt="Guild Icon"
+            class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full border-2 border-blue-500"
+          />
+          <% } else { %>
+          <div
+            class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full border-2 border-blue-500 flex items-center justify-center bg-gray-700"
+          >
+            <i class="fas fa-users text-3xl text-gray-400"></i>
+          </div>
+          <% } %>
+
+          <h2 class="text-2xl sm:text-3xl font-bold text-center">
+            <%= guild.name %>
+          </h2>
+          <p class="text-gray-400 text-center">
+            Current Subscription:
+            <span
+              class="<%= guild.premium && guild.premium.isEnable ? 'text-green-400' : 'text-red-400' %> font-semibold"
+            >
+              <%= guild.premium && guild.premium.isEnable ? 'Premium Active' :
+              'Inactive' %>
+            </span>
+          </p>
+        </div>
+
+        <!-- Redeem Form -->
+        <form id="redeem-form" class="space-y-4">
+          <div class="flex flex-col">
+            <label for="redeem-code" class="font-semibold text-gray-200">
+              Enter Your Gift Code
+            </label>
+            <input
+              type="text"
+              id="redeem-code"
+              name="redeem-code"
+              placeholder="XXXX-XXXX-XXXX-XXXX"
+              maxlength="19"
+              class="mt-2 p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          <button
+            type="submit"
+            id="redeem-button"
+            class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 rounded-lg flex justify-center items-center space-x-2 transition-all"
+          >
+            <i class="fas fa-gift"></i>
+            <span>Redeem Code</span>
+          </button>
+
+          <p id="redeem-message" class="text-sm mt-2 text-center"></p>
+        </form>
+
+        <!-- Info Section -->
+        <div class="text-gray-400 text-sm text-center mt-4">
+          Enter a valid gift code to activate premium subscription for your
+          server. Codes are 16 characters long.
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const redeemInput = document.getElementById("redeem-code");
+      const form = document.getElementById("redeem-form");
+      const message = document.getElementById("redeem-message");
+      const redeemButton = document.getElementById("redeem-button");
+
+      // Format input as user types
+      redeemInput.addEventListener("input", (e) => {
+        let value = e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, "");
+        value = value.match(/.{1,4}/g)?.join("-") || "";
+        e.target.value = value;
+
+        // Clear status message on input
+        message.textContent = "";
+      });
+
+      // Submit form
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const code = redeemInput.value.replace(/-/g, "").toUpperCase();
+        if (!code) {
+          message.textContent = "Please enter a code.";
+          message.className = "text-red-400 text-sm mt-2 text-center";
+          return;
+        }
+
+        // Disable button and show loading state
+        redeemButton.disabled = true;
+        const originalContent = redeemButton.innerHTML;
+        redeemButton.innerHTML = `<i class="fas fa-spinner fa-spin"></i> <span>Redeeming...</span>`;
+
+        try {
+          const response = await fetch(`/dashboard/<%= guild.id %>/redeem`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ code }),
+          });
+
+          const data = await response.json();
+
+          if (data.success) {
+            message.textContent = data.message;
+            message.className = "text-green-400 text-sm mt-2 text-center";
+
+            setTimeout(() => {
+              window.location.href = `/dashboard`;
+            }, 1500);
+          } else {
+            message.textContent = data.message;
+            message.className = "text-red-400 text-sm mt-2 text-center";
+            // Re-enable button
+            redeemButton.disabled = false;
+            redeemButton.innerHTML = originalContent;
+          }
+        } catch (err) {
+          console.error(err);
+          message.textContent = "Something went wrong.";
+          message.className = "text-red-400 text-sm mt-2 text-center";
+
+          // Re-enable button
+          redeemButton.disabled = false;
+          redeemButton.innerHTML = originalContent;
+        }
+      });
+    </script>
+  </body>
+</html>

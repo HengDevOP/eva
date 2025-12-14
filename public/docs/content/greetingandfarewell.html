@@ -1,0 +1,159 @@
+<div class="prose max-w-none text-gray-100">
+  <h1 class="text-2xl font-bold mb-4">Greeting & Farewell System</h1>
+  <p class="text-gray-300 mb-4">
+    The Greeting and Farewell system allows you to welcome new members and say
+    goodbye to leaving members automatically. You can customize messages,
+    channels, embeds, and even include media like images or YouTube videos.
+  </p>
+
+  <!-- Greeting Commands -->
+  <h2 class="text-xl font-semibold mt-6 mb-2">Greeting Commands</h2>
+  <ul class="list-disc pl-6 space-y-2 text-gray-300">
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded">
+        !greeting setchannel &lt;#channel&gt;
+      </code>
+      – Set the channel where greeting messages will be sent.
+    </li>
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded">
+        !greeting setmessage &lt;message&gt;
+      </code>
+      – Set a custom greeting message. Use placeholders like
+      <code>{user}</code> and <code>{server}</code>.
+    </li>
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded">
+        !greeting embed enable|disable
+      </code>
+      – Enable or disable embed for greeting messages.
+    </li>
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded">
+        !greeting embed title &lt;text&gt;
+      </code>
+      – Set the embed title for greeting messages.
+    </li>
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded">
+        !greeting embed description &lt;text&gt;
+      </code>
+      – Set the embed description.
+    </li>
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded">
+        !greeting embed thumbnail &lt;url&gt;
+      </code>
+      – Set the embed thumbnail (e.g., server icon or user avatar).
+    </li>
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded">
+        !greeting embed image &lt;url&gt;
+      </code>
+      – Set an image in the embed. Can be direct image URLs or GIFs.
+    </li>
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded">
+        !greeting embed video &lt;YouTube URL&gt;
+      </code>
+      – Embed a YouTube video in the greeting (only works if your bot supports
+      it).
+    </li>
+  </ul>
+
+  <!-- Farewell Commands -->
+  <h2 class="text-xl font-semibold mt-6 mb-2">Farewell Commands</h2>
+  <ul class="list-disc pl-6 space-y-2 text-gray-300">
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded">
+        !farewell setchannel &lt;#channel&gt;
+      </code>
+      – Set the channel where farewell messages will be sent.
+    </li>
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded">
+        !farewell setmessage &lt;message&gt;
+      </code>
+      – Set a custom farewell message with placeholders like
+      <code>{user}</code> and <code>{server}</code>.
+    </li>
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded">
+        !farewell embed enable|disable
+      </code>
+      – Enable or disable embed for farewell messages.
+    </li>
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded">
+        !farewell embed title &lt;text&gt;
+      </code>
+      – Set the embed title for farewell messages.
+    </li>
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded">
+        !farewell embed description &lt;text&gt;
+      </code>
+      – Set the embed description.
+    </li>
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded">
+        !farewell embed thumbnail &lt;url&gt;
+      </code>
+      – Set the embed thumbnail.
+    </li>
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded">
+        !farewell embed image &lt;url&gt;
+      </code>
+      – Set an image in the embed.
+    </li>
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded">
+        !farewell embed video &lt;YouTube URL&gt;
+      </code>
+      – Embed a YouTube video in the farewell message.
+    </li>
+  </ul>
+
+  <!-- Tips & Notes -->
+  <h2 class="text-xl font-semibold mt-6 mb-2">Tips & Notes</h2>
+  <div
+    class="bg-gray-800 border border-gray-700 rounded p-4 mb-4 text-gray-300"
+  >
+    <ul class="list-disc pl-6 space-y-2">
+      <li>
+        You can use placeholders <code>{user}</code> and
+        <code>{server}</code> in messages to dynamically display member and
+        server names.
+      </li>
+      <li>
+        Embeds allow images, GIFs, and even YouTube video links for rich
+        welcome/farewell messages.
+      </li>
+      <li>
+        Ensure the bot has permission to send messages, embed links, attach
+        files, and embed videos in the target channels.
+      </li>
+    </ul>
+  </div>
+
+  <!-- Example Image -->
+  <h2 class="text-xl font-semibold mt-6 mb-2">Example Image</h2>
+  <img
+    src="https://via.placeholder.com/600x200.png?text=Greeting+Example"
+    alt="Greeting Example"
+    class="rounded border border-gray-700 mb-4"
+  />
+
+  <!-- Example YouTube Video -->
+  <h2 class="text-xl font-semibold mt-6 mb-2">Example Video</h2>
+  <div class="aspect-w-16 aspect-h-9 mb-4">
+    <iframe
+      class="w-full h-full rounded border border-gray-700"
+      src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+      title="YouTube video"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>

@@ -1,0 +1,87 @@
+[
+  {
+    "name": "!setup",
+    "description": "Setup Beetle on your server",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!ping",
+    "description": "Check current Beetle status",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!ban @user [ reason ]",
+    "description": "Ban @user from your server with specific reason",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!unban userId [ reason ]",
+    "description": "Unban user from your server with specific reason",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!clearnickname @user",
+    "description": "Clear @user nickname from your server.",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!clearwarn @user",
+    "description": "Clear warning from @user",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!info",
+    "description": "Check your server stats",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!kick @user [ reason ]",
+    "description": "Kick @user from your server with specific reason",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!move @user [ #newVoiceChannel ]",
+    "description": "Move @user to new voice channel",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!nickname @user [ newNickName ]",
+    "description": "Change @user nickname on your server",
+    "usage": "Admin",
+    "isPremium": false
+  },
+
+  {
+    "name": "!tempban @user [ duration ] [ reason ]",
+    "description": "Temprary ban @user from your server with specific duration and reason",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!timeout @user [ duration ] [ reason ]",
+    "description": "Mute @user on your server for specific duration and reason",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!warn @user [ reason ]",
+    "description": "Warn @user in your server with specific reason",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!warninfo @user",
+    "description": "Check @user warning list",
+    "usage": "Admin",
+    "isPremium": false
+  }
+]

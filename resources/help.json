@@ -1,0 +1,32 @@
+[
+  {
+    "command": "!ban <@user> [reason]",
+    "info": "Bans a user from the server.",
+    "category": "moderation"
+  },
+  {
+    "command": "!mute <@user> [duration] [reason]",
+    "info": "Mutes a user for a specified duration with an optional reason.",
+    "category": "moderation"
+  },
+  {
+    "command": "!mod",
+    "info": "Configures the moderation system for the server.",
+    "category": "moderation"
+  },
+  {
+    "command": "!mod channel <#channel>",
+    "info": "Sets the channel where moderation logs will be sent.",
+    "category": "moderation"
+  },
+  {
+    "command": "!mod disable",
+    "info": "Disable the moderation log channel.",
+    "category": "moderation"
+  },
+  {
+    "command": "!mod enable",
+    "info": "Enables the moderation log channel.",
+    "category": "moderation"
+  }
+]

@@ -1,0 +1,63 @@
+<div class="prose max-w-none">
+  <h1 class="text-2xl font-bold text-gray-100 mb-4">Giveaway System</h1>
+  <p class="text-gray-300 mb-4">
+    The giveaway system lets you easily host giveaways in your server. You can
+    set prizes, duration, and winners — all managed by the bot automatically.
+  </p>
+
+  <h2 class="text-xl font-semibold text-gray-200 mt-6 mb-2">Commands</h2>
+  <ul class="list-disc pl-6 space-y-2 text-gray-300">
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded">
+        !giveaway start &lt;time&gt; &lt;winners&gt; &lt;prize&gt;
+      </code>
+      – Starts a new giveaway in the current channel.
+    </li>
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded">
+        !giveaway reroll &lt;messageId&gt;
+      </code>
+      – Rerolls the winners for an existing giveaway.
+    </li>
+    <li>
+      <code class="bg-gray-800 text-gray-100 px-2 py-1 rounded">
+        !giveaway end &lt;messageId&gt;
+      </code>
+      – Ends a giveaway early.
+    </li>
+  </ul>
+
+  <h2 class="text-xl font-semibold text-gray-200 mt-6 mb-2">Examples</h2>
+  <div class="bg-gray-800 border border-gray-700 rounded p-4 mb-4">
+    <p class="text-gray-300"><strong>Start a 1 hour giveaway:</strong></p>
+    <code class="block bg-gray-700 text-gray-100 px-2 py-1 rounded mt-1">
+      !giveaway start 1h 1 Nitro Classic
+    </code>
+  </div>
+
+  <div class="bg-gray-800 border border-gray-700 rounded p-4 mb-4">
+    <p class="text-gray-300"><strong>Reroll a giveaway:</strong></p>
+    <code class="block bg-gray-700 text-gray-100 px-2 py-1 rounded mt-1">
+      !giveaway reroll 123456789012345678
+    </code>
+  </div>
+
+  <h2 class="text-xl font-semibold text-gray-200 mt-6 mb-2">Notes</h2>
+  <ul class="list-disc pl-6 space-y-2 text-gray-300">
+    <li>
+      Time formats supported:
+      <code class="bg-gray-700 text-gray-100 px-1 py-0.5 rounded">s</code>
+      (seconds),
+      <code class="bg-gray-700 text-gray-100 px-1 py-0.5 rounded">m</code>
+      (minutes),
+      <code class="bg-gray-700 text-gray-100 px-1 py-0.5 rounded">h</code>
+      (hours),
+      <code class="bg-gray-700 text-gray-100 px-1 py-0.5 rounded">d</code>
+      (days).
+    </li>
+    <li>Giveaway winners are selected randomly among participants.</li>
+    <li>
+      Only members with the proper permissions can start or end giveaways.
+    </li>
+  </ul>
+</div>

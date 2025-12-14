@@ -1,0 +1,27 @@
+[
+  {
+    "name": "!link enable",
+    "description": "Enable Link Protector on your server",
+    "usage": "Admin"
+  },
+  {
+    "name": "!link disable",
+    "description": "Disable Link Protector on your server",
+    "usage": "Admin"
+  },
+  {
+    "name": "!link message { newMessage }",
+    "description": "Set custom response message",
+    "usage": "Admin"
+  },
+  {
+    "name": "!link whitelist #channel",
+    "description": "Add whitelist channel to allow sending link",
+    "usage": "Admin"
+  },
+  {
+    "name": "!link blacklist #channel ",
+    "description": "Add blacklist channel to deny sending link",
+    "usage": "Admin"
+  }
+]

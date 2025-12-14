@@ -1,0 +1,63 @@
+<footer class="bg-gray-900 border-t border-gray-700 mt-12 shadow-inner">
+  <div
+    class="max-w-7xl mx-auto px-6 py-8 flex flex-col sm:flex-row justify-between items-center gap-6"
+  >
+    <!-- Left Section: Logo / Name -->
+    <div class="flex items-center gap-3">
+      <img
+        src="/transparent.png"
+        alt="Bot Logo"
+        class="w-10 h-10 rounded-xl shadow-md"
+      />
+      <span
+        class="text-white font-extrabold text-lg tracking-tight drop-shadow-lg"
+      >
+        Beetle Multipurpose Bot
+      </span>
+    </div>
+
+    <!-- Middle Section: Links -->
+    <div
+      class="flex flex-wrap justify-center gap-6 text-gray-300 text-sm sm:text-base"
+    >
+      <a
+        href="/servers"
+        class="hover:text-blue-400 transition-all duration-300 font-semibold"
+        >Servers</a
+      >
+      <a
+        href="/support"
+        class="hover:text-blue-400 transition-all duration-300 font-semibold"
+        >Support</a
+      >
+      <a
+        href="/plugins"
+        class="hover:text-blue-400 transition-all duration-300 font-semibold"
+        >Plugins</a
+      >
+      <a
+        href="/pricing"
+        class="hover:text-blue-400 transition-all duration-300 font-semibold"
+        >Pricing</a
+      >
+      <a
+        href="/terms-of-service"
+        class="hover:text-blue-400 transition-all duration-300 font-semibold"
+        >Terms</a
+      >
+    </div>
+
+    <!-- Right Section: Copyright -->
+    <div
+      class="text-gray-400 text-sm sm:text-base flex flex-col sm:flex-row items-center gap-2"
+    >
+      <span>&copy; <%= new Date().getFullYear() %> Beetle.</span>
+      <span class="hidden sm:inline">All rights reserved.</span>
+    </div>
+  </div>
+
+  <!-- Optional: subtle gradient separator -->
+  <div
+    class="h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 opacity-30 mt-4"
+  ></div>
+</footer>

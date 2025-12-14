@@ -1,0 +1,42 @@
+[
+  {
+    "name": "!verify",
+    "description": "View verification server dashboard",
+    "usage": "Admin"
+  },
+  {
+    "name": "!verify setup ",
+    "description": "Run setup verification in your server",
+    "usage": "Admin"
+  },
+  {
+    "name": "!verify setchannel #newChannel",
+    "description": "Set verification to specific text channel",
+    "usage": "Admin"
+  },
+  {
+    "name": "!verify enable",
+    "description": "Enable verification on your server",
+    "usage": "Admin"
+  },
+  {
+    "name": "!verify disable",
+    "description": "Disable verification on your server",
+    "usage": "Admin"
+  },
+  {
+    "name": "!verify setrole @role",
+    "description": "Set a role to be automatically assigned to members once they complete the verification process.",
+    "usage": "Admin"
+  },
+  {
+    "name": "!verify takerole @role",
+    "description": "Remove a role from the list of roles that are automatically assigned to members after verification.",
+    "usage": "Admin"
+  },
+  {
+    "name": "!verify refresh",
+    "description": "Use this command to refresh any deleted roles in verification",
+    "usage": "Admin"
+  }
+]

@@ -1,0 +1,104 @@
+[
+  {
+    "name": "!greeting",
+    "description": "View greeting server dashboard",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!greeting enable",
+    "description": "Enable greeting on your server",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!greeting disable",
+    "description": "Disable greeting on your server",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!greeting channel #channel",
+    "description": "Beetle will send all greeting message in #channel",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!greeting test",
+    "description": "Test greeting message",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!greeting message { content }",
+    "description": "Set custom content message when someone join your server, use placeholder {pinguser}, {username}, {usertag}, {userid}, {servername}, {usernickname}, {membercount}, {membercount_ordinal}, {createdat}, {joinedat} to replace for specific value content",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!greeting message reset",
+    "description": "Reset custom content message to default",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!greeting embed enable",
+    "description": "Enable embed greeting message on your server",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!greeting embed disable",
+    "description": "Disable embed greeting message on your server",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!greeting embed title { content }",
+    "description": "Set custom embed title message content, you can also use placeholder too",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!greeting embed title reset",
+    "description": "Reset custom embed message title to default",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!greeting embed description { content }",
+    "description": "Set custom embed description message content, you can also use placeholder too",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!greeting embed description reset",
+    "description": "Reset embed description content to default",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!greeting embed thumbnail [ {usericon}, {servericon} ] ",
+    "description": "Set custom embed thumbnail, use {usericon}, {servericon} to display for specific value or use `reset` to reset back to default for none display",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!greeting embed color #XXXXXX",
+    "description": "Set custom embed color, use `reset` to reset back to default #FFFFFF",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!greeting embed footer { content }",
+    "description": "Set custom embed footer, placeholder support soon...",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!greeting embed footer reset",
+    "description": "Reset embed footer to default none display",
+    "usage": "Admin",
+    "isPremium": false
+  }
+]

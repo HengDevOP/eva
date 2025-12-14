@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Servers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="bg-gray-900 text-white min-h-screen font-sans">
+    <!-- Navbar -->
+    <%- include('layout/nav') %>
+
+    <!-- Servers Content -->
+    <main class="max-w-7xl mx-auto mt-24 p-6 space-y-6">
+      <h1
+        class="text-3xl font-bold mb-6 text-center text-gradient bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-pink-500"
+      >
+        Community Servers Trusted Beetle
+      </h1>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <% if (guilds && guilds.length > 0) { %> <% guilds.forEach((guild,
+        index) => { %>
+        <div
+          class="bg-gray-800 bg-opacity-80 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden flex flex-col transform transition-all hover:scale-105 hover:shadow-3xl"
+          data-aos="fade-up"
+          data-aos-delay="<%= index * 50 %>"
+        >
+          <div
+            class="h-28 bg-gradient-to-r from-purple-700 via-pink-600 to-orange-500 relative flex items-center justify-center"
+          >
+            <!-- Guild Icon -->
+            <div
+              class="absolute -bottom-8 left-6 w-20 h-20 rounded-full border-4 border-gray-900 bg-gray-700 overflow-hidden flex items-center justify-center shadow-lg"
+            >
+              <% if (guild.icon) { %>
+              <img
+                src="<%= guild.icon %>"
+                alt="<%= guild.name %> Icon"
+                class="w-full h-full rounded-full object-cover"
+              />
+              <% } else { %>
+              <span class="text-gray-400 text-sm">N/A</span>
+              <% } %>
+            </div>
+
+            <!-- Guild Name & Members -->
+            <div class="text-center mx-auto">
+              <h2 class="text-xl font-extrabold text-white drop-shadow-lg">
+                <%= guild.name %>
+              </h2>
+              <p
+                class="text-gray-100 text-sm mt-1 font-medium flex items-center justify-center gap-1"
+              >
+                <i class="fas fa-users"></i>
+                <span><%= guild.memberCount.toLocaleString() %></span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Content Below Banner -->
+          <div class="pt-12 p-4 flex flex-col flex-1">
+            <% if (guild.description) { %>
+            <p class="text-gray-300 mb-4 text-sm line-clamp-3">
+              <%= guild.description %>
+            </p>
+            <% } else { %>
+            <p class="text-gray-400 mb-4 text-sm">No description provided.</p>
+            <% } %>
+
+            <!-- Action Button -->
+            <div class="mt-auto flex justify-center">
+              <% if (guild.invite) { %>
+              <a
+                href="<%= guild.invite %>"
+                target="_blank"
+                class="bg-gradient-to-r from-green-400 to-blue-500 hover:from-green-500 hover:to-blue-600 px-5 py-2 rounded-full text-sm font-semibold transition duration-300 shadow-lg"
+              >
+                Join Server
+              </a>
+              <% } else { %>
+              <span class="text-gray-500 text-sm">No invite available</span>
+              <% } %>
+            </div>
+          </div>
+        </div>
+        <% }); %> <% } else { %>
+        <!-- Skeleton Cards -->
+        <% for(let i=0; i<8; i++) { %>
+        <div
+          class="animate-pulse bg-gray-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col"
+        >
+          <div
+            class="h-28 bg-gray-700 relative flex items-center justify-center"
+          ></div>
+          <div class="pt-12 p-4 flex flex-col flex-1 space-y-2">
+            <div class="h-4 bg-gray-600 rounded w-3/4"></div>
+            <div class="h-3 bg-gray-600 rounded w-1/2"></div>
+            <div class="h-8 bg-gray-600 rounded w-full mt-auto"></div>
+          </div>
+        </div>
+        <% } %> <% } %>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <%- include('layout/footer') %>
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+        easing: "ease-out-cubic",
+      });
+    </script>
+  </body>
+</html>

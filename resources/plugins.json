@@ -1,0 +1,241 @@
+[
+  {
+    "name": "Moderation",
+    "slug": "moderation",
+    "image": "https://cdn-icons-png.flaticon.com/128/2592/2592317.png",
+    "shortDescription": "Advance admin task for server management",
+    "tags": ["moderation", "automod", "administrator"],
+    "premium": false,
+    "category": "Managements"
+  },
+  {
+    "name": "Greeting",
+    "slug": "greeting",
+    "image": "https://cdn-icons-png.flaticon.com/128/14697/14697227.png",
+    "shortDescription": "A greeting is a friendly or polite expression used to acknowledge someone’s presence or arrival. In a game or bot context, it is typically an automated message or interaction that welcomes users, making them feel acknowledged and encouraged to participate. Greetings can include phrases, emojis, or personalized messages, and they help establish a positive and engaging environment for players or community members.",
+    "tags": ["automation"],
+    "premium": false,
+    "category": "Managements"
+  },
+  {
+    "name": "Farewell",
+    "slug": "farewell",
+    "image": "https://cdn-icons-png.flaticon.com/128/5619/5619652.png",
+    "shortDescription": "A farewell is a polite or friendly expression used when someone is leaving or ending an interaction. In a game or bot context, it is often an automated message or response that bids users goodbye, thanks them for their time, or encourages them to return. Farewells help create a warm and considerate atmosphere, leaving players or users with a positive impression.",
+    "tags": ["automation"],
+    "premium": false,
+    "category": "Managements"
+  },
+  {
+    "name": "Economy",
+    "slug": "economy",
+    "image": "https://cdn-icons-png.flaticon.com/128/1490/1490853.png",
+    "shortDescription": "An vitual currency allow your discord server to spend, manage, transfer and more.",
+    "tags": ["fun"],
+    "premium": false,
+    "category": "Fun Engagments"
+  },
+  {
+    "name": "Link Protector",
+    "slug": "linkprotector",
+    "image": "https://cdn-icons-png.flaticon.com/128/249/249110.png",
+    "shortDescription": "The Link Protector plugin safeguards your server by automatically detecting and blocking malicious or unwanted links. It helps prevent phishing, scams, and spam by filtering out unsafe URLs and optionally allowing trusted domains. Keep your community safe and secure with real-time link monitoring and customizable protection settings.",
+    "tags": ["automation"],
+    "premium": true,
+    "category": "Managements"
+  },
+  {
+    "name": "NameGuard",
+    "slug": "nameguard",
+    "image": "https://cdn-icons-png.flaticon.com/128/473/473627.png",
+    "shortDescription": "NameGuard helps your server maintain a safe and friendly environment by automatically detecting and preventing offensive, inappropriate, or unwanted words in usernames and nicknames.",
+    "tags": ["automation"],
+    "premium": true,
+    "category": "Managements"
+  },
+  {
+    "name": "TempVoice",
+    "slug": "tempvoice",
+    "image": "https://cdn-icons-png.flaticon.com/128/4194/4194877.png",
+    "shortDescription": "Create and manage server temporary voice channel",
+    "tags": ["automation"],
+    "premium": true,
+    "category": "Managements"
+  },
+  {
+    "name": "Verification",
+    "slug": "verification",
+    "image": "https://cdn-icons-png.flaticon.com/128/7166/7166256.png",
+    "shortDescription": "The verification system helps secure your server by ensuring that new members are legitimate and meet your community requirements before gaining full access. It can prevent spam, bots, and unwanted users, providing a safe and organized environment.",
+    "tags": ["automation", "security"],
+    "premium": true,
+    "category": "Fun Engagments"
+  },
+  {
+    "name": "Coinflip",
+    "slug": "coinflip",
+    "image": "https://cdn-icons-png.flaticon.com/128/1974/1974961.png",
+    "shortDescription": "Coinflip is a fun server tool that lets your members flip coins using your server’s economy system. Winners get double their bet! This plugin requires the Economy plugin and comes with a banking system where server owners can deposit funds to allow bets. It supports configurable min/max bets, tracks profit and loss, and lets you customize messages for ongoing flips and outcomes.",
+    "tags": ["economy", "gambling"],
+    "premium": true,
+    "category": "Fun Engagments"
+  },
+  {
+    "name": "Blackjack",
+    "slug": "blackjack",
+    "image": "https://cdn-icons-png.flaticon.com/128/10646/10646123.png",
+    "shortDescription": "Blackjack game work with currency",
+    "tags": ["economy", "gambling"],
+    "premium": true,
+    "category": "Fun Engagments"
+  },
+  {
+    "name": "Giveaway",
+    "slug": "giveaway",
+    "image": "https://cdn-icons-png.flaticon.com/128/4315/4315515.png",
+    "shortDescription": "Allow your server to have giveaway stuff or something.",
+    "tags": ["economy", "giveaway", "games"],
+    "premium": true,
+    "category": "Fun Engagments"
+  },
+  {
+    "name": "Invite Tracker",
+    "slug": "invite-tracker",
+    "image": "https://cdn-icons-png.flaticon.com/128/1632/1632686.png",
+    "shortDescription": "Track member who join your server.",
+    "tags": ["economy", "invite-tracker", "automation"],
+    "premium": true,
+    "category": "Fun Engagments"
+  },
+  {
+    "name": "Daily Rewards",
+    "slug": "daily",
+    "image": "https://cdn-icons-png.flaticon.com/128/8146/8146553.png",
+    "shortDescription": "Claim your daily rewards",
+    "tags": ["economy"],
+    "premium": false,
+    "category": "Fun Engagments"
+  },
+  {
+    "name": "TaxFee",
+    "slug": "taxfee",
+    "image": "https://cdn-icons-png.flaticon.com/128/1308/1308479.png",
+    "shortDescription": "Apply tax to the currency system",
+    "tags": ["economy", "localbank"],
+    "premium": false,
+    "category": "Fun Engagments"
+  },
+  {
+    "name": "Ticket Tool",
+    "slug": "tickettool",
+    "image": "https://cdn-icons-png.flaticon.com/128/12519/12519801.png",
+    "shortDescription": "Built-in ticket system for your server",
+    "tags": ["economy", "moderation", "automation", "support"],
+    "premium": true
+  },
+  {
+    "name": "Payroll",
+    "slug": "payroll",
+    "image": "https://cdn-icons-png.flaticon.com/128/2657/2657025.png",
+    "shortDescription": "Payroll system distributed currency to any role",
+    "tags": ["economy", "system", "automation"],
+    "premium": true
+  },
+  {
+    "name": "Donation",
+    "slug": "donation",
+    "image": "https://cdn-icons-png.flaticon.com/128/10880/10880476.png",
+    "shortDescription": "Allow user to make donation for your community",
+    "tags": ["economy", "bank"],
+    "premium": true
+  },
+  {
+    "name": "Farming",
+    "slug": "farming",
+    "image": "https://cdn-icons-png.flaticon.com/128/1150/1150353.png",
+    "shortDescription": "Allow user to make donation for your community",
+    "tags": ["economy", "farming"],
+    "premium": true
+  },
+  {
+    "name": "Hunting Master",
+    "slug": "huntingmaster",
+    "image": "https://cdn-icons-png.flaticon.com/128/6103/6103624.png",
+    "shortDescription": "Venture deep into the wild to track and hunt animals for valuable resources. Hunting can reward you with meat, pelts, rare items, or even legendary trophies if you’re lucky. But be careful — the wilderness is unpredictable, and not every hunt ends in success!",
+    "tags": ["economy", "hunting", "fun"],
+    "premium": true
+  },
+  {
+    "name": "Slots Machine",
+    "slug": "slotsmachine",
+    "image": "https://cdn-icons-png.flaticon.com/128/2108/2108661.png",
+    "shortDescription": "A simple slots machine that make your community fun and also work with economy",
+    "tags": ["economy", "gambling"],
+    "premium": true
+  },
+  {
+    "name": "Fishing",
+    "slug": "fishing",
+    "image": "https://cdn-icons-png.flaticon.com/128/427/427270.png",
+    "shortDescription": "The Fishing Plugin allows users to catch fish, earn rewards, and progress through a dynamic fishing economy. Server owners can fully customize spawn rates, fish rarity, rewards, and seasonal events, creating a unique and engaging experience for their community. Players can explore different fishing locations, trade catches, complete quests, and collaborate with others, all while participating in a rewarding, interactive economy.",
+    "tags": ["economy"],
+    "premium": true
+  },
+  {
+    "name": "Jobs",
+    "slug": "jobs",
+    "image": "https://cdn-icons-png.flaticon.com/128/3281/3281289.png",
+    "shortDescription": "Venture deep into the wild to track and hunt animals for valuable resources. Hunting can reward you with meat, pelts, rare items, or even legendary trophies if you’re lucky. But be careful — the wilderness is unpredictable, and not every hunt ends in success!",
+    "tags": ["economy", "payroll", "automation"],
+    "premium": true
+  },
+
+  {
+    "name": "Items",
+    "slug": "items",
+    "image": "https://cdn-icons-png.flaticon.com/128/9288/9288312.png",
+    "shortDescription": "Items – Take full control of your server’s resources with the Items plugin. This powerful system lets you add, remove, and customize items for your server, giving you the flexibility to create a unique inventory or reward system. Whether you want to manage user-owned items, set up shop inventories, or create special rewards, Items provides an easy-to-use interface for server item customization and management. Perfect for enhancing your server’s economy, gameplay, or interactive experiences.",
+    "tags": ["economy"],
+    "premium": true
+  },
+  {
+    "name": "Lucky Draw",
+    "slug": "luckydraw",
+    "image": "https://cdn-icons-png.flaticon.com/128/987/987283.png",
+    "shortDescription": "Let your members purchase a lucky number and let draw for the winner",
+    "tags": ["economy"],
+    "premium": true
+  },
+  {
+    "name": "MineSweeper",
+    "slug": "minesweeper",
+    "image": "https://cdn-icons-png.flaticon.com/128/3002/3002390.png",
+    "shortDescription": "Minesweeper is a classic logic-based puzzle game where players uncover hidden tiles on a grid to avoid explosive mines. Each safe tile reveals a number that indicates how many mines are touching that tile — helping you deduce which nearby tiles are dangerous. The goal is to uncover all safe spaces without triggering a single mine.",
+    "tags": ["economy", "gambling"],
+    "premium": true
+  },
+  {
+    "name": "Role Shop",
+    "slug": "roleshop",
+    "image": "https://cdn-icons-png.flaticon.com/128/18868/18868567.png",
+    "shortDescription": "Create and manage your own custom role shop, this will let your server members to purchase using currency economy and get that role",
+    "tags": ["economy", "shop"],
+    "premium": true
+  },
+  {
+    "name": "Beg",
+    "slug": "beg",
+    "image": "https://cdn-icons-png.flaticon.com/128/4117/4117266.png",
+    "shortDescription": "Beg is a simple plugin allowed your server members to earn currency begging from another members, we are doing this to prevent from fraud currency.",
+    "tags": ["economy", "fun"],
+    "premium": false
+  },
+  {
+    "name": "Response",
+    "slug": "response",
+    "image": "https://cdn-icons-png.flaticon.com/128/18355/18355220.png",
+    "shortDescription": "Create your own custom bot response command",
+    "tags": ["automation"],
+    "premium": true
+  }
+]

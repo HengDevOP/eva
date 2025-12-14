@@ -1,0 +1,51 @@
+<aside
+  class="w-64 bg-gray-800 border-r border-gray-700 flex flex-col h-screen sticky top-0"
+>
+  <!-- Guild Info -->
+  <div class="flex items-center gap-3 p-4 border-b border-gray-700">
+    <img
+      class="w-12 h-12 rounded-full"
+      src="https://cdn.discordapp.com/icons/<%= guild.id %>/<%= guild.icon %>.png"
+      alt="<%= guild.name %>"
+    />
+    <div>
+      <h2 class="text-white font-semibold truncate"><%= guild.name %></h2>
+      <p class="text-xs text-gray-400">Server Settings</p>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="flex-1 p-3 space-y-1">
+    <!-- Welcomer -->
+    <a
+      href="/dashboard/<%= guild.id %>/welcomer"
+      class="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition"
+    >
+      <span>👋</span>
+      <span>Welcomer</span>
+    </a>
+
+    <!-- AutoMod -->
+    <a
+      href="/dashboard/<%= guild.id %>/automod"
+      class="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition"
+    >
+      <span>🛡️</span>
+      <span>AutoMod</span>
+    </a>
+
+    <!-- Invite Tracker -->
+    <a
+      href="/dashboard/<%= guild.id %>/invites"
+      class="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition"
+    >
+      <span>📨</span>
+      <span>Invite Tracker</span>
+    </a>
+  </nav>
+
+  <!-- Footer -->
+  <div class="p-4 border-t border-gray-700 text-xs text-gray-400">
+    © <%= botName %>
+  </div>
+</aside>

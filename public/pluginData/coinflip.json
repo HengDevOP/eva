@@ -1,0 +1,72 @@
+[
+  {
+    "name": "You can use 2 commands `cf` or `coinflip`",
+    "description": "Support 2 Commands",
+    "usage": "Everyone"
+  },
+  {
+    "name": "!coinflip",
+    "description": "A simple flip without economy",
+    "usage": "Everyone"
+  },
+  {
+    "name": "!coinflip {choice} {betAmount}",
+    "description": "Flip a coin using economy. Choice can be `heads`, `head`, `h`, `tails`, `tail`, `t`. betAmount must be number. Example !cf heads 200",
+    "usage": "Everyone"
+  },
+  {
+    "name": "!coinflip {betAmount} {choice}",
+    "description": "Flip a coin using economy. Choice can be `heads`, `head`, `h`, `tails`, `tail`, `t`. betAmount must be number. Example !cf 200 tails",
+    "usage": "Everyone"
+  },
+  {
+    "name": "!coinflip enable",
+    "description": "Enabled coinflip in your server",
+    "usage": "Admin"
+  },
+  {
+    "name": "!coinflip disable",
+    "description": "Disabled coinflip in your server",
+    "usage": "Admin"
+  },
+  {
+    "name": "!coinflip min {newBetAmount}",
+    "description": "Set a custom minimum bet amount",
+    "usage": "Admin"
+  },
+  {
+    "name": "!coinflip max {newBetAmount}",
+    "description": "Set a custom maximum bet amount",
+    "usage": "Admin"
+  },
+  {
+    "name": "!coinflip bank",
+    "description": "Show your coinflip bank funds",
+    "usage": "Admin"
+  },
+  {
+    "name": "!coinflip dep {amount}",
+    "description": "Add funds into coinflip bank",
+    "usage": "Admin"
+  },
+  {
+    "name": "!coinflip wit {amount}",
+    "description": "Withdraw funds from coinflip bank",
+    "usage": "Admin"
+  },
+  {
+    "name": "!coinflip ongoingmessage {newMessage}",
+    "description": "Set a custom ongoing message. Use `reset` to reset to default",
+    "usage": "Admin"
+  },
+  {
+    "name": "!coinflip outcomemessage {newMessage}",
+    "description": "Set a custom outcome message. Use `reset` to reset to default",
+    "usage": "Admin"
+  },
+  {
+    "name": "Placeholder Support List",
+    "description": "We allow your administrator to set both custom ongoing and outcome message for support placeholder. - {choice} = user bet choice. - {outcome} =  flip result heads or tails. - {betamount} = original bet amount. - {amount} = total wining amount. - {won} = can be lost or won based of outcome. - {icon} = your economy icon. Don't worry here an example for use: `You spent {icon}{betAmount} and chose {choice} The coin is flipping...`",
+    "usage": "Admin"
+  }
+]

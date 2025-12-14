@@ -1,0 +1,98 @@
+[
+  {
+    "name": "!economy || !c || !currency || !e",
+    "description": "Show your currency",
+    "usage": "Everyone",
+    "isPremium": false
+  },
+  {
+    "name": "!economy leaderboard || !economy lb",
+    "description": "Show currency leaderboard",
+    "usage": "Everyone",
+    "isPremium": false
+  },
+  {
+    "name": "!economy wit { ammount } || !economy withdraw { amount }",
+    "description": "Withdraw balance from your bank",
+    "usage": "Everyone",
+    "isPremium": false
+  },
+  {
+    "name": "!economy dep { ammount } || !economy depoist { amount }",
+    "description": "Deposit balance into your bank",
+    "usage": "Everyone",
+    "isPremium": false
+  },
+  {
+    "name": "!economy send @user { amount }",
+    "description": "Transfer balance into @user economy account",
+    "usage": "Everyone",
+    "isPremium": false
+  },
+  {
+    "name": "!economy @user",
+    "description": "Check @user currency account",
+    "usage": "Everyone",
+    "isPremium": false
+  },
+  {
+    "name": "!economy enable",
+    "description": "Let everyone using currency in your server",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!economy disable",
+    "description": "Let everyone stop using currency in your server",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!economy create @user",
+    "description": "Create economy account for user",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!economy delete @user",
+    "description": "Delete economy account from user",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!economy addbalance @user { amount }",
+    "description": "Add balance into user economy account",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!economy takebalance @user { amount }",
+    "description": "Take balance from user economy account",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!economy resetbalance @user",
+    "description": "Reset user economy account to default",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!economy icon { newIcon }",
+    "description": "Custom economy emoji icon",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!economy theme { newTheme }",
+    "description": "Set your own custom currency theme display, theme can be `classic`, `basic`. `pro`, `custom`",
+    "usage": "Admin",
+    "isPremium": false
+  },
+  {
+    "name": "!economy bg { newBGURL }",
+    "description": "Change custom economy display background image, this only work for `pro` theme",
+    "usage": "Admin",
+    "isPremium": false
+  }
+]

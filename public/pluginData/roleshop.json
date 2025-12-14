@@ -1,0 +1,27 @@
+[
+  {
+    "name": "!roleshop",
+    "description": "Show available server role shop",
+    "usage": "Everyone"
+  },
+  {
+    "name": "!roleshop buy { itemid }",
+    "description": "Buy that role using economy balance",
+    "usage": "Everyone"
+  },
+  {
+    "name": "!roleshop enable",
+    "description": "Enable Role Shop plugin on your server",
+    "usage": "Admin"
+  },
+  {
+    "name": "!roleshop disable",
+    "description": "Disable Role Shop plugin on your server",
+    "usage": "Admin"
+  },
+  {
+    "name": "!roleshop add @role { price } { stock = null }",
+    "description": "Add role into the server shopping list",
+    "usage": "Admin"
+  }
+]
