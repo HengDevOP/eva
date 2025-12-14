@@ -21,6 +21,7 @@ const PORT = process.env.PORT;
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
+
 // Add these lines:
 app.use(express.json()); // to parse application/json
 app.use(express.urlencoded({ extended: true })); // to parse form data
